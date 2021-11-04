@@ -162,6 +162,11 @@ ________________________
 
 .item1{
     background-color: rgb(255, 190, 225);
+    position: relative; /*par rapport container*/
+    /* position: fixed; dans nav bar*/
+
+    top: 50px;
+    left: 50px;
 }
 
 .item2{
@@ -173,6 +178,12 @@ ________________________
 Units
 ________________________
 */
+.box__percent {
+    width: 50%;
+    }
+    .box__pixels {
+    width: 200px;
+    }
 .box__container {
     height: auto;
     margin: 10px;
@@ -183,6 +194,8 @@ ________________________
     height: auto;
     margin: 10px;
     background-color: var(--primary-300);
+    display: flex;
+    justify-content: space-between;
 }
 
 .font__container {
@@ -190,13 +203,22 @@ ________________________
     margin: 10px;
     font-size: 25px;
 }
-
+.font__1em {/*taille par rapprot le container si le container et 25px donc 1 em et 25px */
+    font-size: 1em;
+    }
+    .font__1rem {/*  taille par rapport la page */
+    font-size: 1rem;
+    }
 
 /*
 ________________________
 Flex
 ________________________
 */
+
+/*flex-flow: column-reverse  wrap-reverse;
+align-content: space-between;
+justify-content:center;*/
 .flex__container {
     display: flex;
     justify-content: center;
@@ -215,7 +237,15 @@ ________________________
     background-color: var(--primary-100);
 }
 /* Extra small devices (phones, 600px and down) */
+@media screen  and (min-width:600px ) and( max-width : 800px ){
 
+    .media__container{
+    height: 20vh;
+    width: 90vw;
+    margin-bottom: 50px;
+    background-color: var(--primary-900);
+}
+}
 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
